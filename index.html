@@ -89,10 +89,20 @@
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
     }
 
+    .collapsible-header {
+      background-color: rgba(255, 255, 255, 0.1) !important;
+      color: #b2ebf2 !important;
+    }
+    .collapsible-body {
+      background-color: rgba(255, 255, 255, 0.05);
+      color: #e0f7fa;
+    }
+
     #section1 { background: url('bg1.jpg') center/cover no-repeat; }
     #section2 { background: url('bg3.jpg') center/cover no-repeat; }
     #section3 { background: url('bg2.jpg') center/cover no-repeat; }
     #section4 { background: url('bg4.jpg') center/cover no-repeat; }
+    #section5 { background: url('bg1.jpg') center/cover no-repeat; }
   </style>
 </head>
 <body>
@@ -101,6 +111,7 @@
     <li><a href="#home">Home</a></li>
     <li><a href="#about">About</a></li>
     <li><a href="#gallery">Gallery</a></li>
+    <li><a href="#musings">Musings</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
 
@@ -122,7 +133,6 @@
         <p class="flow-text">
           I’m a CPU RTL Design Engineer at Apple passionate about crafting efficient processors. Outside the lab, I enjoy traveling, painting, and experimenting in the kitchen.
         </p>
-
         <div class="row">
           <div class="col s12 m6">
             <h5>Experience</h5>
@@ -162,6 +172,27 @@
       </div>
     </div>
 
+    <div class="section" id="section5" data-anchor="musings">
+      <div class="overlay"></div>
+      <div class="content container">
+        <h2>Musings</h2>
+        <ul class="collapsible popout">
+          <li>
+            <div class="collapsible-header"><i class="fas fa-quote-left"></i>On Curiosity</div>
+            <div class="collapsible-body"><span>Curiosity is not just a trait — it’s the compass that’s led me into design, exploration, and art.</span></div>
+          </li>
+          <li>
+            <div class="collapsible-header"><i class="fas fa-brain"></i>On Engineering</div>
+            <div class="collapsible-body"><span>The beauty of hardware is how invisible brilliance powers everyday life. I strive to be part of that quiet magic.</span></div>
+          </li>
+          <li>
+            <div class="collapsible-header"><i class="fas fa-globe"></i>On Travel</div>
+            <div class="collapsible-body"><span>Each city leaves a trace. A mural, a bakery, a conversation. And I carry those fragments into how I live and build.</span></div>
+          </li>
+        </ul>
+      </div>
+    </div>
+
     <div class="section" id="section4" data-anchor="contact">
       <div class="overlay"></div>
       <div class="content">
@@ -184,12 +215,14 @@
   <script>
     document.addEventListener('DOMContentLoaded', function() {
       new fullpage('#fullpage', {
-        anchors: ['home','about','gallery','contact'],
+        anchors: ['home','about','gallery','musings','contact'],
         menu: '#menu',
         navigation: true,
         scrollingSpeed: 1200,
         easingcss3: 'ease-in-out'
       });
+      var elems = document.querySelectorAll('.collapsible');
+      var instances = M.Collapsible.init(elems);
     });
   </script>
 </body>

@@ -31,7 +31,6 @@
     }
 
     body {
-      /* updated SVG pattern over #0F2027 */
       background-color: #0F2027;
       background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='400' viewBox='0 0 800 800'%3E%3Cg fill='none' stroke='%230A373C' stroke-width='1'%3E%3Cpath d='M769 229L1037 260.9M927 880L731 737 520 660 309 538 40 599 295 764 126.5 879.5 40 599-197 493 102 382-31 229 126.5 79.5-69-63'/%3E%3Cpath d='M-31 229L237 261 390 382 603 493 308.5 537.5 101.5 381.5M370 905L295 764'/%3E%3Cpath d='M520 660L578 842 731 737 840 599 603 493 520 660 295 764 309 538 390 382 539 269 769 229 577.5 41.5 370 105 295 -36 126.5 79.5 237 261 102 382 40 599 -69 737 127 880'/%3E%3Cpath d='M520-140L578.5 42.5 731-63M603 493L539 269 237 261 370 105M902 382L539 269M390 382L102 382'/%3E%3Cpath d='M-222 42L126.5 79.5 370 105 539 269 577.5 41.5 927 80 769 229 902 382 603 493 731 737M295-36L577.5 41.5M578 842L295 764M40-201L127 80M102 382L-261 269'/%3E%3C/g%3E%3Cg fill='%230D464D'%3E%3Ccircle cx='769' cy='229' r='5'/%3E%3Ccircle cx='539' cy='269' r='5'/%3E%3Ccircle cx='603' cy='493' r='5'/%3E%3Ccircle cx='731' cy='737' r='5'/%3E%3Ccircle cx='520' cy='660' r='5'/%3E%3Ccircle cx='309' cy='538' r='5'/%3E%3Ccircle cx='295' cy='764' r='5'/%3E%3Ccircle cx='40' cy='599' r='5'/%3E%3Ccircle cx='102' cy='382' r='5'/%3E%3Ccircle cx='127' cy='80' r='5'/%3E%3Ccircle cx='370' cy='105' r='5'/%3E%3Ccircle cx='578' cy='42' r='5'/%3E%3Ccircle cx='237' cy='261' r='5'/%3E%3Ccircle cx='390' cy='382' r='5'/%3E%3C/g%3E%3C/svg%3E");
       background-repeat: repeat;
@@ -97,31 +96,6 @@
       color: #e0f7fa !important;
       border: 1px solid rgba(255, 255, 255, 0.2);
     }
-
-    .collapsible-header {
-      background-color: rgba(255, 255, 255, 0.1) !important;
-      color: #b2ebf2 !important;
-    }
-    .collapsible-body {
-      background-color: rgba(255, 255, 255, 0.05) !important;
-      color: #e0f7fa !important;
-    }
-
-    .horizontal-gallery {
-      display: flex;
-      overflow-x: auto;
-      gap: 20px;
-      padding: 20px 0;
-      scroll-snap-type: x mandatory;
-      justify-content: flex-start;
-    }
-    .horizontal-gallery img {
-      max-height: 300px;
-      flex-shrink: 0;
-      border-radius: 8px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-      scroll-snap-align: center;
-    }
   </style>
 </head>
 <body>
@@ -129,8 +103,6 @@
   <ul id="menu">
     <li><a href="#home">Home</a></li>
     <li><a href="#about">About</a></li>
-    <li><a href="#gallery">Gallery</a></li>
-    <li><a href="#musings">Musings</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
 
@@ -160,7 +132,6 @@
             <ul class="collection">
               <li class="collection-item">Apple – CPU RTL Design Engineer (2023–Present)</li>
               <li class="collection-item">Intel – CPU Design Intern (2022–2023)</li>
-              <li class="collection-item">Pavilion – Intern (2020)</li>
             </ul>
           </div>
           <div class="col s12 m6">
@@ -171,55 +142,6 @@
             </ul>
           </div>
         </div>
-      </div>
-    </div>
-
-    <!-- GALLERY -->
-    <div class="section" id="section2" data-anchor="gallery">
-      <div class="overlay"></div>
-      <div class="content">
-        <h2>Gallery</h2>
-        <div class="horizontal-gallery">
-          <img src="painting1.jpg" alt="Painting 1" />
-          <img src="painting2.jpg" alt="Painting 2" />
-          <img src="painting3.jpg" alt="Painting 3" />
-          <img src="painting4.jpg" alt="Painting 4" />
-        </div>
-      </div>
-    </div>
-
-    <!-- MUSINGS -->
-    <div class="section" id="section5" data-anchor="musings">
-      <div class="overlay"></div>
-      <div class="content container">
-        <h2>Musings</h2>
-        <ul class="collapsible popout">
-          <li>
-            <div class="collapsible-header"><i class="fas fa-quote-left"></i>On Curiosity</div>
-            <div class="collapsible-body">
-              <span>Curiosity is not just a trait — it’s also a Mars rover.</span>
-            </div>
-          </li>
-          <li>
-            <div class="collapsible-header"><i class="fas fa-brain"></i>On Engineering</div>
-            <div class="collapsible-body">
-              <span>CPU go brrr!</span>
-            </div>
-          </li>
-          <li>
-            <div class="collapsible-header"><i class="fas fa-globe"></i>On Travel</div>
-            <div class="collapsible-body">
-              <span>All roads lead back home</span>
-            </div>
-          </li>
-          <li>
-            <div class="collapsible-header"><i class="fas fa-brain"></i>The next clue</div>
-            <div class="collapsible-body">
-              <span>"2. Not every celebration gets a sequel. The original date still remembers. Look where you plan your days."</span>
-            </div>
-          </li>
-          
-        </ul>
       </div>
     </div>
 
